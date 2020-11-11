@@ -38,12 +38,13 @@ public class addActivity extends AppCompatActivity {
                 name=editText1.getText().toString();
                 jieshi=editText2.getText().toString();
                 lijv=editText3.getText().toString();
-                new Data1(name,jieshi,lijv).save();
                 if (!name.equals("")&&!jieshi.equals("")&&!lijv.equals("")){
                     Intent intent_return = new Intent();
                     intent_return.putExtra("name",name);
                     intent_return.putExtra("jieshi",jieshi);
                     intent_return.putExtra("lijv",lijv);
+                    System.out.print(name);
+                    new Data1(name,jieshi,lijv).save();
                     setResult(RESULT_OK,intent_return);
                     finish();
                 }else {

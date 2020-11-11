@@ -62,7 +62,6 @@
         android:textColorHint="#999898"
         android:textSize="14.5dp"
         android:typeface="sans"
-        android:inputType="number"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -85,7 +84,6 @@
         android:textColorHint="#999898"
         android:textSize="14.5dp"
         android:typeface="sans"
-        android:inputType="number"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </EditText>
@@ -107,7 +105,6 @@
         android:textColorHint="#999898"
         android:textSize="14.5dp"
         android:typeface="sans"
-        android:inputType="number"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </EditText>

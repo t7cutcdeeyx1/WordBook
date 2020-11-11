@@ -52,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode) {
             case 2:
                 if (resultCode == RESULT_OK){
-                    String name=data.getStringExtra("tiwen");
-                    String jieshi=data.getStringExtra("jiaren");
-                    String lijv=data.getStringExtra("time");
+                    String name=data.getStringExtra("name");
+                    String jieshi=data.getStringExtra("jieshi");
+                    String lijv=data.getStringExtra("lijv");
                     Data1 data1= new Data1(name,jieshi,lijv);
                     data1List.add(0,data1);
                     adapter_data1.notifyItemInserted(0);
@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             holder.textView1.setText(data1.getName());
             holder.textView2.setText(data1.getJieshi());
             holder.textView3.setText(data1.getLijv());
+            System.out.print(data1.getName());
         }
 
         class ViewHolder extends RecyclerView.ViewHolder {
