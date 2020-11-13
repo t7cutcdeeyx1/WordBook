@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     valuesx.put("jieshi",holder.textView2.getText().toString());
                     valuesx.put("lijv",holder.textView3.getText().toString());
                     DataSupport.updateAll(Data1.class, valuesx, "id = ?",data1.getId()+"");
+                    data1List.set(position,new Data1(holder.textView1.getText().toString(),holder.textView2.getText().toString(),holder.textView3.getText().toString()));
                     holder.textView1.clearFocus();
                     holder.textView2.clearFocus();
                     holder.textView3.clearFocus();
