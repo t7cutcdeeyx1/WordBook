@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import org.litepal.crud.DataSupport;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -40,11 +42,11 @@ public class addActivity extends AppCompatActivity {
                 lijv=editText3.getText().toString();
                 if (!name.equals("")&&!jieshi.equals("")&&!lijv.equals("")){
                     Intent intent_return = new Intent();
+                    new Data1(name,jieshi,lijv).save();
                     intent_return.putExtra("name",name);
                     intent_return.putExtra("jieshi",jieshi);
                     intent_return.putExtra("lijv",lijv);
-                    System.out.print(name);
-                    new Data1(name,jieshi,lijv).save();
+                    intent_return.putExtra("id",DataSupport.findLast(Data1.class).id);
                     setResult(RESULT_OK,intent_return);
                     finish();
                 }else {

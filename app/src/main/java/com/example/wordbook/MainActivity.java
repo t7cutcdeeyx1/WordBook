@@ -78,9 +78,11 @@ public class MainActivity extends AppCompatActivity {
                     String name=data.getStringExtra("name");
                     String jieshi=data.getStringExtra("jieshi");
                     String lijv=data.getStringExtra("lijv");
+                    int id = data.getIntExtra("id",0);
                     Data1 data1= new Data1(name,jieshi,lijv);
+                    data1.id=id;
                     data1List.add(0,data1);
-                    adapter_data1.notifyItemInserted(0);
+                    adapter_data1.notifyDataSetChanged();
                     recyclerView.scrollToPosition(0);
                 }
                 break;
