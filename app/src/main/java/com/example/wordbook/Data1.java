@@ -3,6 +3,7 @@ package com.example.wordbook;
 import org.litepal.crud.DataSupport;
 
 public class Data1 extends DataSupport {
+    int id;
     String name;
     String jieshi;
     String lijv;
@@ -15,6 +16,14 @@ public class Data1 extends DataSupport {
         this.name = name;
         this.jieshi = jieshi;
         this.lijv = lijv;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
